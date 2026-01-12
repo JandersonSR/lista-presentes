@@ -1,138 +1,199 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
-    <title>Lista de Presentes | Thais & Janderson</title>
+  <title>Lista de Presentes | Thais & Janderson</title>
 
-      <!-- Fonte elegante -->
-        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Montserrat:wght@300;400&display=swap"
+    rel="stylesheet">
 
-          <style>
-              body {
-                    margin: 0;
-                          padding: 0;
-                                font-family: 'Montserrat', sans-serif;
-                                      background:
-                                              linear-gradient(rgba(255,255,255,0.88), rgba(255,255,255,0.88)),
-                                                      url("https://images.pexels.com/photos/931162/pexels-photo-931162.jpeg?auto=compress&cs=tinysrgb&w=1600");
-                                                            background-size: cover;
-                                                                  background-position: center;
-                                                                        color: #4a2c2a;
-                                                                            }
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Montserrat', sans-serif;
+      background:
+        linear-gradient(rgba(255, 255, 255, 0.88), rgba(255, 255, 255, 0.88)),
+        url("https://images.pexels.com/photos/931162/pexels-photo-931162.jpeg?auto=compress&cs=tinysrgb&w=1600");
+      background-size: cover;
+      background-position: center;
+      color: #4a2c2a;
+    }
 
-                                                                                .container {
-                                                                                      max-width: 650px;
-                                                                                            margin: auto;
-                                                                                                  padding: 40px 25px;
-                                                                                                        text-align: center;
-                                                                                                            }
+    .container {
+      max-width: 650px;
+      margin: auto;
+      padding: 40px 25px;
+      text-align: center;
+    }
 
-                                                                                                                h1 {
-                                                                                                                      font-family: 'Playfair Display', serif;
-                                                                                                                            font-size: 36px;
-                                                                                                                                  color: #7b1e3a; /* marsala */
-                                                                                                                                        margin-bottom: 10px;
-                                                                                                                                            }
+    h1, h2 {
+      font-family: 'Playfair Display', serif;
+      color: #7b1e3a;
+    }
 
-                                                                                                                                                h2 {
-                                                                                                                                                      font-family: 'Playfair Display', serif;
-                                                                                                                                                            font-size: 22px;
-                                                                                                                                                                  font-weight: 400;
-                                                                                                                                                                        margin-bottom: 30px;
-                                                                                                                                                                              color: #7b1e3a;
-                                                                                                                                                                                  }
+    h1 { font-size: 36px; }
+    h2 { font-size: 22px; margin-bottom: 30px; }
 
-                                                                                                                                                                                      p {
-                                                                                                                                                                                            font-size: 16px;
-                                                                                                                                                                                                  line-height: 1.7;
-                                                                                                                                                                                                        margin-bottom: 35px;
-                                                                                                                                                                                                            }
+    p {
+      font-size: 16px;
+      line-height: 1.7;
+      margin-bottom: 35px;
+    }
 
-                                                                                                                                                                                                                .botoes {
-                                                                                                                                                                                                                      display: flex;
-                                                                                                                                                                                                                            justify-content: center;
-                                                                                                                                                                                                                                  gap: 40px;
-                                                                                                                                                                                                                                        flex-wrap: wrap;
-                                                                                                                                                                                                                                            }
+    .botoes {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
 
-                                                                                                                                                                                                                                                .acao {
-                                                                                                                                                                                                                                                      text-align: center;
-                                                                                                                                                                                                                                                            max-width: 140px;
-                                                                                                                                                                                                                                                                }
+    .acao {
+      text-align: center;
+      max-width: 140px;
+    }
 
-                                                                                                                                                                                                                                                                    .botao-redondo {
-                                                                                                                                                                                                                                                                          width: 110px;
-                                                                                                                                                                                                                                                                                height: 110px;
-                                                                                                                                                                                                                                                                                      border-radius: 50%;
-                                                                                                                                                                                                                                                                                            background-color: #7b1e3a;
-                                                                                                                                                                                                                                                                                                  display: flex;
-                                                                                                                                                                                                                                                                                                        align-items: center;
-                                                                                                                                                                                                                                                                                                              justify-content: center;
-                                                                                                                                                                                                                                                                                                                    text-decoration: none;
-                                                                                                                                                                                                                                                                                                                          color: white;
-                                                                                                                                                                                                                                                                                                                                font-size: 42px;
-                                                                                                                                                                                                                                                                                                                                      box-shadow: 0 8px 20px rgba(123, 30, 58, 0.35);
-                                                                                                                                                                                                                                                                                                                                            transition: transform 0.2s ease, box-shadow 0.2s ease;
-                                                                                                                                                                                                                                                                                                                                                }
+    .botao-redondo {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      background-color: #7b1e3a;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      color: white;
+      font-size: 42px;
+      box-shadow: 0 8px 20px rgba(123, 30, 58, 0.35);
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
 
-                                                                                                                                                                                                                                                                                                                                                    .botao-redondo:hover {
-                                                                                                                                                                                                                                                                                                                                                          transform: scale(1.05);
-                                                                                                                                                                                                                                                                                                                                                                box-shadow: 0 12px 28px rgba(123, 30, 58, 0.45);
-                                                                                                                                                                                                                                                                                                                                                                    }
+    .botao-redondo:hover {
+      transform: scale(1.05);
+    }
 
-                                                                                                                                                                                                                                                                                                                                                                        .acao span {
-                                                                                                                                                                                                                                                                                                                                                                              display: block;
-                                                                                                                                                                                                                                                                                                                                                                                    margin-top: 12px;
-                                                                                                                                                                                                                                                                                                                                                                                          font-size: 15px;
-                                                                                                                                                                                                                                                                                                                                                                                                color: #4a2c2a;
-                                                                                                                                                                                                                                                                                                                                                                                                    }
+    .acao span {
+      display: block;
+      margin-top: 12px;
+      font-size: 15px;
+    }
 
-                                                                                                                                                                                                                                                                                                                                                                                                        footer {
-                                                                                                                                                                                                                                                                                                                                                                                                              margin-top: 50px;
-                                                                                                                                                                                                                                                                                                                                                                                                                    font-size: 14px;
-                                                                                                                                                                                                                                                                                                                                                                                                                          color: #6b4a47;
-                                                                                                                                                                                                                                                                                                                                                                                                                              }
+    footer {
+      margin-top: 50px;
+      font-size: 14px;
+      color: #6b4a47;
+    }
 
-                                                                                                                                                                                                                                                                                                                                                                                                                                  @media (max-width: 480px) {
-                                                                                                                                                                                                                                                                                                                                                                                                                                        h1 {
-                                                                                                                                                                                                                                                                                                                                                                                                                                                font-size: 30px;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                      }
-                                                                                                                                                                                                                                                                                                                                                                                                                                                            .botoes {
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                    gap: 25px;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                          }
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                              }
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                </style>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                </head>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <body>
+    /* MODAL PIX */
+    .modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.55);
+      justify-content: center;
+      align-items: center;
+      z-index: 999;
+    }
 
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  <div class="container">
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      <h1>Lista de Presentes</h1>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          <h2>Thais & Janderson</h2>
+    .modal-conteudo {
+      background: #fff;
+      padding: 30px 25px;
+      border-radius: 16px;
+      max-width: 320px;
+      width: 100%;
+      text-align: center;
+    }
 
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              <p>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    Com muito carinho, criamos esta lista simbólica para quem desejar nos presentear 🤍<br><br>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          Mais do que qualquer presente, sua presença em nosso casamento é o mais importante para nós.<br><br>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                Caso queira contribuir com qualquer valor, ficaremos imensamente felizes e gratos por esse gesto de carinho.
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    </p>
+    .modal-conteudo img {
+      width: 220px;
+      margin-bottom: 15px;
+    }
 
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <div class="botoes">
+    .cpf {
+      font-size: 16px;
+      font-weight: bold;
+      margin: 10px 0;
+      color: #7b1e3a;
+    }
 
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              <div class="acao">
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      <a class="botao-redondo" href="LINK_PIX_AQUI">💖</a>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              <span>Contribuir via PIX</span>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    </div>
+    .copiar {
+      background: #7b1e3a;
+      color: #fff;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-size: 14px;
+    }
 
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          <div class="acao">
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  <a class="botao-redondo" href="LINK_MERCADO_PAGO_AQUI">💳</a>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          <span>Contribuir com cartão</span>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                </div>
+    .fechar {
+      margin-top: 15px;
+      font-size: 13px;
+      color: #777;
+      cursor: pointer;
+    }
+  </style>
+</head>
 
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    </div>
+<body>
 
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <footer>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              Com amor, Thais & Janderson 🤍
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  </footer>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    </div>
+  <div class="container">
+    <h1>Lista de Presentes</h1>
+    <h2>Thais & Janderson</h2>
 
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    </body>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    </html>
+    <p>
+      Com muito carinho, criamos esta lista simbólica para quem desejar nos presentear 🤍<br><br>
+      Mais do que qualquer presente, sua presença é o mais importante para nós.<br><br>
+      Caso queira contribuir com qualquer valor, ficaremos imensamente gratos.
+    </p>
+
+    <div class="botoes">
+
+      <div class="acao">
+        <div class="botao-redondo" onclick="abrirPix()">💖</div>
+        <span>Contribuir via PIX</span>
+      </div>
+
+      <div class="acao">
+        <a class="botao-redondo" href="LINK_MERCADO_PAGO_AQUI" target="_blank">💳</a>
+        <span>Contribuir com cartão</span>
+      </div>
+
+    </div>
+
+    <footer>
+      Com amor, Thais & Janderson 🤍
+    </footer>
+  </div>
+
+  <!-- MODAL PIX -->
+  <div class="modal" id="modalPix">
+    <div class="modal-conteudo">
+      <img src="pix-qrcode.png" alt="QR Code Pix">
+      <p>Você também pode usar nossa chave Pix (CPF):</p>
+      <div class="cpf" id="cpfPix">000.000.000-00</div>
+      <button class="copiar" onclick="copiarCPF()">Copiar CPF</button>
+      <div class="fechar" onclick="fecharPix()">Fechar</div>
+    </div>
+  </div>
+
+  <script>
+    function abrirPix() {
+      document.getElementById("modalPix").style.display = "flex";
+    }
+
+    function fecharPix() {
+      document.getElementById("modalPix").style.display = "none";
+    }
+
+    function copiarCPF() {
+      const cpf = document.getElementById("cpfPix").innerText;
+      navigator.clipboard.writeText(cpf);
+      alert("CPF copiado com sucesso!");
+    }
+  </script>
+
+</body>
+</html>
