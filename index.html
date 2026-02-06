@@ -5,8 +5,7 @@
   <meta charset="UTF-8">
   <title>Lista de Presentes | Thais & Janderson</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Montserrat:wght@300;400&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
 
   <style>
     body {
@@ -22,19 +21,20 @@
     }
 
     .container {
-      max-width: 650px;
+      max-width: 760px;
       margin: auto;
       padding: 40px 25px;
       text-align: center;
     }
 
-    h1, h2 {
+    h1, h2, h3 {
       font-family: 'Playfair Display', serif;
       color: #7b1e3a;
     }
 
     h1 { font-size: 36px; }
-    h2 { font-size: 22px; margin-bottom: 30px; }
+    h2 { font-size: 22px; margin-bottom: 20px; }
+    h3 { margin: 45px 0 25px; }
 
     p {
       font-size: 16px;
@@ -42,16 +42,17 @@
       margin-bottom: 35px;
     }
 
+    /* BOTÕES LIVRES */
     .botoes {
       display: flex;
       justify-content: center;
-      gap: 40px;
+      gap: 35px;
       flex-wrap: wrap;
     }
 
     .acao {
       text-align: center;
-      max-width: 140px;
+      max-width: 150px;
     }
 
     .botao-redondo {
@@ -80,8 +81,49 @@
       font-size: 15px;
     }
 
+    /* PRESENTES CRIATIVOS */
+    .presentes {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 22px;
+      margin-top: 10px;
+    }
+
+    .presente {
+      background: #fff;
+      border-radius: 18px;
+      padding: 22px 18px;
+      text-decoration: none;
+      color: #4a2c2a;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+      transition: transform 0.2s ease;
+    }
+
+    .presente:hover {
+      transform: translateY(-5px);
+    }
+
+    .presente .emoji {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+
+    .presente strong {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 16px;
+    }
+
+    .valor {
+      display: block;
+      margin-top: 6px;
+      font-weight: bold;
+      color: #7b1e3a;
+      font-size: 15px;
+    }
+
     footer {
-      margin-top: 50px;
+      margin-top: 55px;
       font-size: 14px;
       color: #6b4a47;
     }
@@ -104,11 +146,6 @@
       max-width: 320px;
       width: 100%;
       text-align: center;
-    }
-
-    .modal-conteudo img {
-      width: 220px;
-      margin-bottom: 15px;
     }
 
     .cpf {
@@ -139,61 +176,106 @@
 
 <body>
 
-  <div class="container">
-    <h1>Lista de Presentes</h1>
-    <h2>Thais & Janderson</h2>
+<div class="container">
+  <h1>Lista de Presentes</h1>
+  <h2>Thais & Janderson</h2>
 
-    <p>
-      Com muito carinho, criamos esta lista simbólica para quem desejar nos presentear 🤍<br><br>
-      Mais do que qualquer presente, sua presença é o mais importante para nós.<br><br>
-      Caso queira contribuir com qualquer valor, ficaremos imensamente gratos.
-    </p>
+  <p>
+    Com muito carinho, criamos esta lista simbólica para quem desejar nos presentear 🤍<br><br>
+    Mais do que qualquer presente, sua presença é o mais importante para nós.
+  </p>
 
-    <div class="botoes">
-
-      <div class="acao">
-        <div class="botao-redondo" onclick="abrirPix()">💖</div>
-        <span>Contribuir via PIX (sem taxa)</span>
-      </div>
-
-      <div class="acao">
-        <a class="botao-redondo" href="http://link.mercadopago.com.br/casamentothaisejan" target="_blank">💳</a>
-        <span>Contribuir com cartão</span>
-      </div>
-
+  <!-- PRESENTE LIVRE -->
+  <div class="botoes">
+    <div class="acao">
+      <div class="botao-redondo" onclick="abrirPix()">💖</div>
+      <span>Presente livre via PIX</span>
     </div>
 
-    <footer>
-      Com amor, Thais & Janderson 🤍
-    </footer>
-  </div>
-
-  <!-- MODAL PIX -->
-  <div class="modal" id="modalPix">
-    <div class="modal-conteudo">
-      <img src="pix-qrcode.png" alt="QR Code Pix">
-      <p>Você também pode usar nossa chave Pix (CPF):</p>
-      <div class="cpf" id="cpfPix">399.692.578-62</div>
-      <button class="copiar" onclick="copiarCPF()">Copiar CPF</button>
-      <div class="fechar" onclick="fecharPix()">Fechar</div>
+    <div class="acao">
+      <a class="botao-redondo" href="https://link.mercadopago.com.br/casamentothaisejan" target="_blank">💳</a>
+      <span>Presente livre no cartão</span>
     </div>
   </div>
 
-  <script>
-    function abrirPix() {
-      document.getElementById("modalPix").style.display = "flex";
-    }
+  <!-- PRESENTES CRIATIVOS -->
+  <h3>Presentes Criativos 💝</h3>
 
-    function fecharPix() {
-      document.getElementById("modalPix").style.display = "none";
-    }
+  <div class="presentes">
 
-    function copiarCPF() {
-      const cpf = document.getElementById("cpfPix").innerText;
-      navigator.clipboard.writeText(cpf);
-      alert("CPF copiado com sucesso!");
-    }
-  </script>
+    <a class="presente" href="https://mpago.la/2H3cvep" target="_blank">
+      <div class="emoji">☕</div>
+      <strong>Café do casal</strong>
+      <span class="valor">R$ 50,00</span>
+    </a>
+
+    <a class="presente" href="https://mpago.la/2SCNoSf" target="_blank">
+      <div class="emoji">🍕</div>
+      <strong>Noite da pizza</strong>
+      <span class="valor">R$ 100,00</span>
+    </a>
+
+    <a class="presente" href="https://mpago.la/21EZVfx" target="_blank">
+      <div class="emoji">🍷</div>
+      <strong>Jantar romântico</strong>
+      <span class="valor">R$ 150,00</span>
+    </a>
+
+    <a class="presente" href="https://mpago.la/1tUz86c" target="_blank">
+      <div class="emoji">🏡</div>
+      <strong>Ajuda no lar</strong>
+      <span class="valor">R$ 250,00</span>
+    </a>
+
+    <a class="presente" href="https://mpago.la/2UarXpL" target="_blank">
+      <div class="emoji">✈️</div>
+      <strong>Lua de mel</strong>
+      <span class="valor">R$ 400,00</span>
+    </a>
+
+    <a class="presente" href="https://mpago.la/2cNCEr6" target="_blank">
+      <div class="emoji">💖</div>
+      <strong>Spoiler da lua de mel</strong>
+      <span class="valor">R$ 600,00</span>
+    </a>
+
+    <a class="presente" href="https://mpago.la/1X8aiVy" target="_blank">
+      <div class="emoji">👑</div>
+      <strong>Presente especial</strong>
+      <span class="valor">R$ 1.000,00</span>
+    </a>
+
+  </div>
+
+  <footer>
+    Com amor, Thais & Janderson 🤍
+  </footer>
+</div>
+
+<!-- MODAL PIX -->
+<div class="modal" id="modalPix">
+  <div class="modal-conteudo">
+    <p>Chave Pix (CPF):</p>
+    <div class="cpf" id="cpfPix">399.692.578-62</div>
+    <button class="copiar" onclick="copiarCPF()">Copiar CPF</button>
+    <div class="fechar" onclick="fecharPix()">Fechar</div>
+  </div>
+</div>
+
+<script>
+  function abrirPix() {
+    document.getElementById("modalPix").style.display = "flex";
+  }
+
+  function fecharPix() {
+    document.getElementById("modalPix").style.display = "none";
+  }
+
+  function copiarCPF() {
+    navigator.clipboard.writeText("399.692.578-62");
+    alert("CPF copiado com sucesso!");
+  }
+</script>
 
 </body>
 </html>
