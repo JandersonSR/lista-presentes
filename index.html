@@ -8,7 +8,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
 
   <style>
-   body {
+    body {
   margin: 0;
   padding: 0;
   font-family: 'Montserrat', sans-serif;
@@ -51,7 +51,9 @@ p {
   margin-bottom: 35px;
 }
 
-/* BOTÕES LIVRES */
+/* =========================
+   BOTÕES LIVRES
+========================= */
 .botoes {
   display: flex;
   justify-content: center;
@@ -90,7 +92,9 @@ p {
   font-size: 15px;
 }
 
-/* PRESENTES CRIATIVOS */
+/* =========================
+   PRESENTES CRIATIVOS
+========================= */
 .presentes {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -138,40 +142,37 @@ footer {
 }
 
 /* =========================
-   MODAL PIX – DESKTOP
+   MODAL PIX (FUNCIONAL)
 ========================= */
 .modal {
   display: none;
   position: fixed;
   inset: 0;
   background: rgba(0, 0, 0, 0.55);
+  display: flex;
   justify-content: center;
   align-items: center;
   z-index: 999;
 }
 
-@media (max-width: 480px) {
-  .modal-conteudo {
-    max-width: 100%;
-    padding: 34px 24px;
-    border-radius: 20px;
-  }
-
-  .cpf {
-    font-size: 18px;
-  }
-
-  .copiar {
-    width: 100%;
-    padding: 14px;
-    font-size: 15px;
-  }
+.modal-conteudo {
+  background: #fff;
+  padding: 32px 26px;
+  border-radius: 18px;
+  width: 90%;
+  max-width: 420px;
+  text-align: center;
+  box-sizing: border-box;
 }
-    
-.cpf {
+
+.modal-conteudo p {
   font-size: 16px;
+}
+
+.cpf {
+  font-size: 18px;
   font-weight: bold;
-  margin: 14px 0;
+  margin: 16px 0;
   color: #7b1e3a;
 }
 
@@ -179,10 +180,11 @@ footer {
   background: #7b1e3a;
   color: #fff;
   border: none;
-  padding: 12px 18px;
+  padding: 14px 20px;
   border-radius: 22px;
   cursor: pointer;
   font-size: 15px;
+  width: 100%;
 }
 
 .fechar {
@@ -193,40 +195,20 @@ footer {
 }
 
 /* =========================
-   MODAL PIX – CELULAR
+   AJUSTES FINOS MOBILE
 ========================= */
 @media (max-width: 480px) {
-  .modal {
-    align-items: flex-start;
+  .modal-conteudo {
+    padding: 34px 24px;
+    border-radius: 20px;
   }
 
-  .modal-conteudo {
-    margin-top: 6vh;
-    width: 94vw;
-    max-width: none;
-    min-height: 65vh;
-    padding: 34px 26px;
-    border-radius: 24px;
+  .cpf {
+    font-size: 19px;
   }
 
   .modal-conteudo p {
     font-size: 17px;
-  }
-
-  .cpf {
-    font-size: 20px;
-    margin: 18px 0;
-  }
-
-  .copiar {
-    width: 100%;
-    padding: 15px;
-    font-size: 16px;
-  }
-
-  .fechar {
-    font-size: 15px;
-    margin-top: 22px;
   }
 }
 
