@@ -1,218 +1,235 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
   <meta charset="UTF-8">
   <title>Lista de Presentes | Thais & Janderson</title>
 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
 
   <style>
+    /* =========================
+       BASE — MOBILE FIRST
+    ========================= */
     body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Montserrat', sans-serif;
-  background:
-    linear-gradient(rgba(255, 255, 255, 0.88), rgba(255, 255, 255, 0.88)),
-    url("https://images.pexels.com/photos/931162/pexels-photo-931162.jpeg?auto=compress&cs=tinysrgb&w=1600");
-  background-size: cover;
-  background-position: center;
-  color: #4a2c2a;
-}
+      margin: 0;
+      padding: 0;
+      font-family: 'Montserrat', sans-serif;
+      background:
+        linear-gradient(rgba(255, 255, 255, 0.88), rgba(255, 255, 255, 0.88)),
+        url("https://images.pexels.com/photos/931162/pexels-photo-931162.jpeg?auto=compress&cs=tinysrgb&w=1600");
+      background-size: cover;
+      background-position: center;
+      color: #4a2c2a;
+    }
 
-.container {
-  max-width: 760px;
-  margin: auto;
-  padding: 40px 25px;
-  text-align: center;
-}
+    .container {
+      max-width: 760px;
+      margin: auto;
+      padding: 32px 20px;
+      text-align: center;
+    }
 
-h1, h2, h3 {
-  font-family: 'Playfair Display', serif;
-  color: #7b1e3a;
-}
+    h1, h2, h3 {
+      font-family: 'Playfair Display', serif;
+      color: #7b1e3a;
+    }
 
-h1 {
-  font-size: 36px;
-}
+    h1 {
+      font-size: 30px;
+    }
 
-h2 {
-  font-size: 22px;
-  margin-bottom: 20px;
-}
+    h2 {
+      font-size: 18px;
+      margin-bottom: 18px;
+    }
 
-h3 {
-  margin: 45px 0 25px;
-}
+    h3 {
+      margin: 40px 0 22px;
+    }
 
-p {
-  font-size: 16px;
-  line-height: 1.7;
-  margin-bottom: 35px;
-}
+    p {
+      font-size: 15px;
+      line-height: 1.7;
+      margin-bottom: 32px;
+    }
 
-/* =========================
-   BOTÕES LIVRES
-========================= */
-.botoes {
-  display: flex;
-  justify-content: center;
-  gap: 35px;
-  flex-wrap: wrap;
-}
+    /* =========================
+       BOTÕES
+    ========================= */
+    .botoes {
+      display: flex;
+      justify-content: center;
+      gap: 28px;
+      flex-wrap: wrap;
+    }
 
-.acao {
-  text-align: center;
-  max-width: 150px;
-}
+    .acao {
+      text-align: center;
+      max-width: 150px;
+    }
 
-.botao-redondo {
-  width: 110px;
-  height: 110px;
-  border-radius: 50%;
-  background-color: #7b1e3a;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  color: white;
-  font-size: 42px;
-  box-shadow: 0 8px 20px rgba(123, 30, 58, 0.35);
-  cursor: pointer;
-  transition: transform 0.2s ease;
-}
+    .botao-redondo {
+      width: 96px;
+      height: 96px;
+      border-radius: 50%;
+      background-color: #7b1e3a;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      color: white;
+      font-size: 38px;
+      box-shadow: 0 8px 20px rgba(123, 30, 58, 0.35);
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
 
-.botao-redondo:hover {
-  transform: scale(1.05);
-}
+    .botao-redondo:hover {
+      transform: scale(1.05);
+    }
 
-.acao span {
-  display: block;
-  margin-top: 12px;
-  font-size: 15px;
-}
+    .acao span {
+      display: block;
+      margin-top: 10px;
+      font-size: 14px;
+    }
 
-/* =========================
-   PRESENTES CRIATIVOS
-========================= */
-.presentes {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 22px;
-  margin-top: 10px;
-}
+    /* =========================
+       PRESENTES
+    ========================= */
+    .presentes {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 20px;
+    }
 
-.presente {
-  background: #fff;
-  border-radius: 18px;
-  padding: 22px 18px;
-  text-decoration: none;
-  color: #4a2c2a;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
-  transition: transform 0.2s ease;
-}
+    .presente {
+      background: #fff;
+      border-radius: 18px;
+      padding: 20px 16px;
+      text-decoration: none;
+      color: #4a2c2a;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+      transition: transform 0.2s ease;
+    }
 
-.presente:hover {
-  transform: translateY(-5px);
-}
+    .presente:hover {
+      transform: translateY(-5px);
+    }
 
-.presente .emoji {
-  font-size: 36px;
-  margin-bottom: 10px;
-}
+    .presente .emoji {
+      font-size: 34px;
+      margin-bottom: 10px;
+    }
 
-.presente strong {
-  display: block;
-  margin-bottom: 6px;
-  font-size: 16px;
-}
+    .presente strong {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 15px;
+    }
 
-.valor {
-  display: block;
-  margin-top: 6px;
-  font-weight: bold;
-  color: #7b1e3a;
-  font-size: 15px;
-}
+    .valor {
+      display: block;
+      margin-top: 6px;
+      font-weight: bold;
+      color: #7b1e3a;
+      font-size: 14px;
+    }
 
-footer {
-  margin-top: 55px;
-  font-size: 14px;
-  color: #6b4a47;
-}
+    footer {
+      margin-top: 48px;
+      font-size: 14px;
+      color: #6b4a47;
+    }
 
-/* =========================
-   MODAL PIX (FUNCIONAL)
-========================= */
-.modal {
-  display: none;
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.55);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 999;
-}
+    /* =========================
+       MODAL PIX
+    ========================= */
+    .modal {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.55);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 999;
+    }
 
-.modal-conteudo {
-  background: #fff;
-  padding: 32px 26px;
-  border-radius: 18px;
-  width: 90%;
-  max-width: 420px;
-  text-align: center;
-  box-sizing: border-box;
-}
+    .modal.ativo {
+      display: flex;
+    }
 
-.modal-conteudo p {
-  font-size: 16px;
-}
+    .modal-conteudo {
+      background: #fff;
+      padding: 30px 22px;
+      border-radius: 18px;
+      width: 90%;
+      max-width: 420px;
+      text-align: center;
+      box-sizing: border-box;
+    }
 
-.cpf {
-  font-size: 18px;
-  font-weight: bold;
-  margin: 16px 0;
-  color: #7b1e3a;
-}
+    .modal-conteudo p {
+      font-size: 15px;
+    }
 
-.copiar {
-  background: #7b1e3a;
-  color: #fff;
-  border: none;
-  padding: 14px 20px;
-  border-radius: 22px;
-  cursor: pointer;
-  font-size: 15px;
-  width: 100%;
-}
+    .cpf {
+      font-size: 18px;
+      font-weight: bold;
+      margin: 16px 0;
+      color: #7b1e3a;
+    }
 
-.fechar {
-  margin-top: 18px;
-  font-size: 14px;
-  color: #777;
-  cursor: pointer;
-}
+    .copiar {
+      background: #7b1e3a;
+      color: #fff;
+      border: none;
+      padding: 14px;
+      border-radius: 22px;
+      cursor: pointer;
+      font-size: 15px;
+      width: 100%;
+    }
 
-/* =========================
-   AJUSTES FINOS MOBILE
-========================= */
-@media (max-width: 480px) {
-  .modal-conteudo {
-    padding: 34px 24px;
-    border-radius: 20px;
-  }
+    .fechar {
+      margin-top: 16px;
+      font-size: 14px;
+      color: #777;
+      cursor: pointer;
+    }
 
-  .cpf {
-    font-size: 19px;
-  }
+    /* =========================
+       TELAS MAIORES
+    ========================= */
+    @media (min-width: 768px) {
+      h1 {
+        font-size: 36px;
+      }
 
-  .modal-conteudo p {
-    font-size: 17px;
-  }
-}
+      h2 {
+        font-size: 22px;
+      }
 
-  
+      p {
+        font-size: 16px;
+      }
+
+      .botao-redondo {
+        width: 110px;
+        height: 110px;
+        font-size: 42px;
+      }
+
+      .presentes {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      }
+
+      .container {
+        padding: 44px 28px;
+      }
+    }
   </style>
 </head>
 
@@ -227,7 +244,6 @@ footer {
     Mais do que qualquer presente, sua presença é o mais importante para nós.
   </p>
 
-  <!-- PRESENTE LIVRE -->
   <div class="botoes">
     <div class="acao">
       <div class="botao-redondo" onclick="abrirPix()">💖</div>
@@ -240,53 +256,16 @@ footer {
     </div>
   </div>
 
-  <!-- PRESENTES CRIATIVOS -->
   <h3>Presentes Criativos 💝</h3>
 
   <div class="presentes">
-
-    <a class="presente" href="https://mpago.la/2H3cvep" target="_blank">
-      <div class="emoji">☕</div>
-      <strong>Café do casal</strong>
-      <span class="valor">R$ 50,00</span>
-    </a>
-
-    <a class="presente" href="https://mpago.la/2SCNoSf" target="_blank">
-      <div class="emoji">🍕</div>
-      <strong>Noite da pizza</strong>
-      <span class="valor">R$ 100,00</span>
-    </a>
-
-    <a class="presente" href="https://mpago.la/21EZVfx" target="_blank">
-      <div class="emoji">🍷</div>
-      <strong>Jantar romântico</strong>
-      <span class="valor">R$ 150,00</span>
-    </a>
-
-    <a class="presente" href="https://mpago.la/1tUz86c" target="_blank">
-      <div class="emoji">🏡</div>
-      <strong>Ajuda no lar</strong>
-      <span class="valor">R$ 250,00</span>
-    </a>
-
-    <a class="presente" href="https://mpago.la/2UarXpL" target="_blank">
-      <div class="emoji">✈️</div>
-      <strong>Lua de mel</strong>
-      <span class="valor">R$ 400,00</span>
-    </a>
-
-    <a class="presente" href="https://mpago.la/2cNCEr6" target="_blank">
-      <div class="emoji">💖</div>
-      <strong>Spoiler da lua de mel</strong>
-      <span class="valor">R$ 600,00</span>
-    </a>
-
-    <a class="presente" href="https://mpago.la/1X8aiVy" target="_blank">
-      <div class="emoji">👑</div>
-      <strong>Presente especial</strong>
-      <span class="valor">R$ 1.000,00</span>
-    </a>
-
+    <a class="presente" href="https://mpago.la/2H3cvep" target="_blank"><div class="emoji">☕</div><strong>Café do casal</strong><span class="valor">R$ 50,00</span></a>
+    <a class="presente" href="https://mpago.la/2SCNoSf" target="_blank"><div class="emoji">🍕</div><strong>Noite da pizza</strong><span class="valor">R$ 100,00</span></a>
+    <a class="presente" href="https://mpago.la/21EZVfx" target="_blank"><div class="emoji">🍷</div><strong>Jantar romântico</strong><span class="valor">R$ 150,00</span></a>
+    <a class="presente" href="https://mpago.la/1tUz86c" target="_blank"><div class="emoji">🏡</div><strong>Ajuda no lar</strong><span class="valor">R$ 250,00</span></a>
+    <a class="presente" href="https://mpago.la/2UarXpL" target="_blank"><div class="emoji">✈️</div><strong>Lua de mel</strong><span class="valor">R$ 400,00</span></a>
+    <a class="presente" href="https://mpago.la/2cNCEr6" target="_blank"><div class="emoji">💖</div><strong>Spoiler da lua de mel</strong><span class="valor">R$ 600,00</span></a>
+    <a class="presente" href="https://mpago.la/1X8aiVy" target="_blank"><div class="emoji">👑</div><strong>Presente especial</strong><span class="valor">R$ 1.000,00</span></a>
   </div>
 
   <footer>
@@ -294,11 +273,10 @@ footer {
   </footer>
 </div>
 
-<!-- MODAL PIX -->
 <div class="modal" id="modalPix">
   <div class="modal-conteudo">
     <p>Chave Pix (CPF):</p>
-    <div class="cpf" id="cpfPix">399.692.578-62</div>
+    <div class="cpf">399.692.578-62</div>
     <button class="copiar" onclick="copiarCPF()">Copiar CPF</button>
     <div class="fechar" onclick="fecharPix()">Fechar</div>
   </div>
@@ -306,11 +284,11 @@ footer {
 
 <script>
   function abrirPix() {
-    document.getElementById("modalPix").style.display = "flex";
+    document.getElementById("modalPix").classList.add("ativo");
   }
 
   function fecharPix() {
-    document.getElementById("modalPix").style.display = "none";
+    document.getElementById("modalPix").classList.remove("ativo");
   }
 
   function copiarCPF() {
