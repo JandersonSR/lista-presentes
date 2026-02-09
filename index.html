@@ -66,9 +66,12 @@
     }
 
     .acao {
-      text-align: center;
-      max-width: 150px;
-    }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 150px;
+}
 
     .botao-redondo {
       width: 96px;
@@ -91,10 +94,12 @@
     }
 
     .acao span {
-      display: block;
-      margin-top: 10px;
-      font-size: 14px;
-    }
+  margin-top: 12px;
+  font-size: 14px;
+  text-align: center;
+  line-height: 1.3;
+  min-height: 36px; /* garante alinhamento igual */
+}
 
     /* =========================
        PRESENTES
